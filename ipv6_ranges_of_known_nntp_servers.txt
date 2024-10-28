@@ -1,4 +1,4 @@
-$ lynx --dump https://www.reddit.com/r/usenet/wiki/providers/#wiki_reseller_map | grep ipaddress | awk -F/ '{ print "host "  $NF }' | sort -u | sh | grep IPv6 | awk '{ print $NF }'  | awk -F: '{$NF=""}1' | tr " " ":" | sort -u
+$ lynx --dump 'https://www.reddit.com/r/usenet/wiki/providers/#wiki_reseller_map' | grep ipaddress | awk -F/ '{ print "host "  $NF }' | sort -u | sh | grep IPv6 | awk '{ print $NF }'  | awk -F: '{$NF=""}1' | tr " " ":" | sort -u
 
 2001:4de0:1::
 2001:4de0:3:119::
